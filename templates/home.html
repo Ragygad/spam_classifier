@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Enron email checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+	<header>
+		<div class="container">
+		<div id="brandname">
+			<img src="https://revature.com/wp-content/uploads/2017/12/revature-logo-600x219.png" style="width: 200px; margin-left: 20px;" alt="">
+		</div>
+		<h2>Enron Spam Emails Detector</h2>
+		
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Compose Email Here   </p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea  name="message" rows="4" cols="50">{{ message }}</textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="check Email">
+		
+	</form>
+		
+	<div>
+		{% block result %} {% endblock %}
+	</div>
+	</div>
+	
+	
+
+</body>
+</html>

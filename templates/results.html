@@ -1,0 +1,10 @@
+{% extends 'home.html' %}
+	
+{% block result %}
+	{% if prediction == 1%}
+	<h2 style="color:red;font-size: 50px; font-weight: 900; font-family: 'Times New Roman', Times, serif; margin-top: 10px;">Spam</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:rgb(5, 70, 5);font-size: 70px; font-weight: 900; font-family: 'Times New Roman', Times, serif; margin-top: 10px;">Not Spam</h2>
+	{% endif %}
+
+{% endblock %} 

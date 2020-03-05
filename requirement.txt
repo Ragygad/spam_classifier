@@ -1,0 +1,9 @@
+gunicorn
+Flask==1.1.1
+Jinja2
+pickleshare==0.7.5
+nltk==3.4.5
+scikit-learn
+scipy
+pandas
+numpy
